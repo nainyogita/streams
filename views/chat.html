@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Chat Web App</title>
+    <link rel="icon" type="image/png" href="http://example.com/myicon.png">
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/chat.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+</head>
+
+<body>
+    <ul class="pages">
+        <li class="chat page">
+            <div class="chatArea">
+                <ul class="messages"></ul>
+            </div>
+            <div id="uploadBox"><button id="upload" class="upload">+</button>
+            </div> <input class="inputMessage" placeholder="Type here..." />
+
+        </li>
+
+        <li class="mySidenav">
+            <div id="mySidenav" class="sidenav">
+
+                <ul class="online-users">
+                    <li class="user-me" style="color:deeppink">
+                    </li>
+                    <li>
+
+                    </li>
+                    <li class="userheader" style="color:green">
+                        Online Users :
+                    </li>
+                </ul>
+                <ul class="online-users" id="current-users">
+                    <li>All Services</li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+    <!-- modal for upload starts here -->
+    <div id="uploadModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Upload a file</h4>
+                </div>
+                <div class="modal-body">
+                    <!--modal body -->
+                    <div class="file-field input-field row">
+                        <div>
+                            <input type="file" id="postFile" name="postFile" />
+                        </div>
+                        <!-- <div class="file-path-wrapper">
+    												<input class="file-path validate" type="text">
+    											</div> -->
+                    </div>
+                </div>
+                <!--modal body -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- modal ends here -->
+    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+
+
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/javascripts/socket.io-stream.js"></script>
+
+        <script src="/javascripts/chatmain.js"></script>
+
+</body>
+
+</html>

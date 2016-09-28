@@ -1,0 +1,4 @@
+#send link as image 
+#download and view buttons
+#delete file after download
+#change file name in uploads folder
